@@ -26,6 +26,11 @@ namespace bands_repository_csharp.Entities
             return this.Id;
         }
 
+        public void setId(int Id)
+        {
+            this.Id = Id;
+        }
+
         public string getName()
         {
             return this.Name;

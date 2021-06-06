@@ -29,7 +29,7 @@ namespace bands_repository_csharp.Services
 
                 if (deleted == false)
                 {
-                    Console.WriteLine($"#ID: {band.getId()} - {band.getName()} {(deleted ? "Deleted!" : "")}");
+                    Console.WriteLine($"#ID: {band.getId()} - {band.getName()}");
                 }
             }
 
@@ -79,6 +79,8 @@ namespace bands_repository_csharp.Services
             Console.WriteLine();
 
             Band newBandUpdate = functionsService.GetDataToInsert(repository);
+            newBandUpdate.setId(id);
+
             repository.UpdateBand(id, newBandUpdate);
         }
 
