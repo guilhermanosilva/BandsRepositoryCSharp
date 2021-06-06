@@ -8,7 +8,7 @@ namespace bands_repository_csharp.Repositories
         T ReturnBandId(int id);
         void InsertBand(T band);
         void UpdateBand(int id, T band);
-        void Delete(int id, T band);
+        void Delete(int id);
         int NextId();
     }
 }

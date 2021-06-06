@@ -105,6 +105,32 @@ namespace bands_repository_csharp.Services
             functionsService.WaitPressKey();
         }
 
+        public void DeleteBand()
+        {
+            Console.Clear();
+            Console.WriteLine("_____ DELETE BAND _____");
+            Console.WriteLine("\nEnter the ID of the band to delete:");
+
+            var bands = repository.ListRepository();
+
+            string inputId = Console.ReadLine();
+            inputId = functionsService.ValidadeNumber(inputId);
+
+            if (functionsService.VerifyIfBandExists(int.Parse(inputId), bands) == false)
+            {
+                Console.WriteLine("Band not foud to delete.");
+                functionsService.WaitPressKey();
+                return;
+            }
+
+            Console.WriteLine("Are you sure you want to delete? Press (y) to yes.");
+            string option = Console.ReadLine();
+            if (string.Equals(option, "y"))
+            {
+                repository.Delete(int.Parse(inputId));
+            }
+        }
+
         private static bool CheckIfEmptyRepository(List<Band> bands)
         {
             if (bands.Count == 0)

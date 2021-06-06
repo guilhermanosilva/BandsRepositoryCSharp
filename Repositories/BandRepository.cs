@@ -7,7 +7,7 @@ namespace bands_repository_csharp.Repositories
     {
         private List<Band> listBand = new List<Band>();
 
-        public void Delete(int id, Band band)
+        public void Delete(int id)
         {
             listBand[id].delete();
         }

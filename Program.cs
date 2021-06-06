@@ -27,8 +27,7 @@ namespace bands_repository_csharp
                         service.ShowBand();
                         break;
                     case "5":
-                        Console.WriteLine("DeleteBand();");
-                        Console.ReadLine();
+                        service.DeleteBand();
                         break;
                     default:
                         Console.WriteLine("\n--> Invalid option.");
