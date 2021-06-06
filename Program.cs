@@ -1,9 +1,11 @@
 ﻿using System;
+using bands_repository_csharp.Services;
 
 namespace bands_repository_csharp
 {
     class Program
     {
+        static BandService service = new BandService();
         static void Main(string[] args)
         {
             string userOption = Menu();
@@ -13,8 +15,7 @@ namespace bands_repository_csharp
                 switch (userOption)
                 {
                     case "1":
-                        Console.WriteLine("ListBands();");
-                        Console.ReadLine();
+                        service.ListBands();
                         break;
                     case "2":
                         Console.WriteLine("InsertBand();");
@@ -33,7 +34,8 @@ namespace bands_repository_csharp
                         Console.ReadLine();
                         break;
                     default:
-                        Console.WriteLine("Please, inert a valid option: \n");
+                        Console.WriteLine("\n--> Invalid option.");
+                        Console.WriteLine("\nPress a key to return");
                         Console.ReadLine();
                         break;
                 }
