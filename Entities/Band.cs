@@ -5,7 +5,7 @@ namespace bands_repository_csharp.Entities
 {
     public class Band : Base
     {
-        public Band(Genre genre, int Id, string name, int formedYear, int numberAlbums, bool deleted)
+        public Band(Genre genre, int Id, string name, int formedYear, int numberAlbums)
         {
             this.Genre = genre;
             this.Id = Id;
