@@ -81,6 +81,30 @@ namespace bands_repository_csharp.Services
             Band newBandUpdate = functionsService.GetDataToInsert(repository);
             repository.UpdateBand(id, newBandUpdate);
         }
+
+        public void ShowBand()
+        {
+            Console.Clear();
+            Console.WriteLine("_____ BAND DETAULS _____");
+            Console.WriteLine("\nEnter the ID of the band");
+
+            var bands = repository.ListRepository();
+
+            string inputId = Console.ReadLine();
+            inputId = functionsService.ValidadeNumber(inputId);
+
+            if (functionsService.VerifyIfBandExists(int.Parse(inputId), bands) == false)
+            {
+                Console.WriteLine("\nBand not found. Please, try another id.");
+                functionsService.WaitPressKey();
+                return;
+            }
+
+            Console.Clear();
+            Console.WriteLine(repository.ReturnBandId(int.Parse(inputId)));
+            functionsService.WaitPressKey();
+        }
+
         private static bool CheckIfEmptyRepository(List<Band> bands)
         {
             if (bands.Count == 0)

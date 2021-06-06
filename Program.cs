@@ -24,8 +24,7 @@ namespace bands_repository_csharp
                         service.UpdateBand();
                         break;
                     case "4":
-                        Console.WriteLine("ShowBand();");
-                        Console.ReadLine();
+                        service.ShowBand();
                         break;
                     case "5":
                         Console.WriteLine("DeleteBand();");

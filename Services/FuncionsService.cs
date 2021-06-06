@@ -11,7 +11,7 @@ namespace bands_repository_csharp.Services
     {
         public void WaitPressKey()
         {
-            Console.WriteLine("Press a key to return.");
+            Console.WriteLine("\nPress a key to return.");
             Console.ReadKey();
         }
 
