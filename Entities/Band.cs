@@ -43,11 +43,11 @@ namespace bands_repository_csharp.Entities
         public override string ToString()
         {
             string returnBand = "";
-            returnBand += "Genre" + this.Genre + Environment.NewLine;
-            returnBand += "Name" + this.Name + Environment.NewLine;
-            returnBand += "Formed Year" + this.FormedYear + Environment.NewLine;
-            returnBand += "Number of Albums" + this.NumberAlbums + Environment.NewLine;
-            returnBand += "Is Deleted" + this.Deleted;
+            returnBand += "Genre: " + this.Genre + Environment.NewLine;
+            returnBand += "Name: " + this.Name + Environment.NewLine;
+            returnBand += "Formed Year: " + this.FormedYear + Environment.NewLine;
+            returnBand += "Number of Albums: " + this.NumberAlbums + Environment.NewLine;
+            returnBand += "Deleted: " + this.Deleted;
             return returnBand;
         }
     }

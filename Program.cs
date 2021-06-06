@@ -21,8 +21,7 @@ namespace bands_repository_csharp
                         service.InsertBand();
                         break;
                     case "3":
-                        Console.WriteLine("UpdateBand();");
-                        Console.ReadLine();
+                        service.UpdateBand();
                         break;
                     case "4":
                         Console.WriteLine("ShowBand();");

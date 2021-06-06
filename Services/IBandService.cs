@@ -4,5 +4,6 @@ namespace bands_repository_csharp.Services
     {
         void ListBands();
         void InsertBand();
+        void UpdateBand();
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using bands_repository_csharp.Entities;
 using bands_repository_csharp.Enums;
@@ -89,6 +90,19 @@ namespace bands_repository_csharp.Services
             return true;
         }
 
+        public bool VerifyIfBandExists(int id, List<Band> bands)
+        {
+            foreach (var band in bands)
+            {
+                if (band.getId() == id)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         public string ValidadeName(string name)
         {
             while (string.IsNullOrEmpty(name) || name.StartsWith(" "))
@@ -110,5 +124,6 @@ namespace bands_repository_csharp.Services
 
             return number;
         }
+
     }
 }
