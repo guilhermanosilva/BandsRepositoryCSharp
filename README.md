@@ -9,6 +9,7 @@
   <kbd><img src="./Images/UpdateBand.gif" width="350" style="border-radius: 5px"></kbd>
 </p>
 
-Nesse projeto foi utilizado pdrões de porjeto como: serapação em camadas, repositórios e injeção de dependência.
+Nesse projeto foi utilizado padrões de projeto como: separação em camadas, repositórios e injeção de dependência.
 
-Todos os campos de entrada foram validados para que não sejam inseridos valores vazios, espços em branco, letras onde o campo é numérico e valores fora do range de opões necessários para seu funcionamento.
+Todos os campos de entrada foram validados para que não sejam inseridos valores vazios, espaços em branco, letras onde o campo é numérico e valores fora do range de opões necessários para seu funcionamento.
+
